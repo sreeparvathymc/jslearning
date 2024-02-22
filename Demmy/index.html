@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../BookExercise/css/style.css">
+</head>
+
+<body>
+    <button id="click_btn">Click</button>
+</body>
+<script>
+    var clickBtn = document.getElementById("click_btn");
+    clickBtn.addEventListener("click",
+        function () {
+            document.body.innerHTML += `<div class="container-2">
+    <label for="bookname">Book Name</label>
+    <input id="bookname">
+    <br>
+    <label for="author">Author Name</label>
+    <input id="author">
+    <br>
+    <label for="discription">Book Discription</label>
+    <input id="discription">
+    <br>
+    <button id="add">Add</button>
+    <button id="cancel">Cancel</button>
+
+</div>`
+        }
+    )
+
+</script>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <h1>Todo List</h1>
+
+        <input id="input">
+
+        <button id="prim-btn" onclick="add()">Add</button>
+
+        <ul id="list-container">
+
+        </ul>
+    </div>
+    <!-- button click listener -->
+    <!-- <button id="btn">Click me</button> -->
+    <script>
+
+        var ul = document.getElementById("list-container")
+        var input = document.getElementById("input")
+        function add(){
+            var listitem = document.createElement("li")
+            listitem.setAttribute("class","itemlist");
+            // listitem.innerHTML = input.value + "<button style='background-color:blue;border-color:green;' onclick='deleteItem(event)'>Delete</button>"
+            listitem.innerHTML = input.value + "<button id='btn' onclick='deleteItem(event)'>Delete</button>"
+
+            ul.append(listitem)
+
+            input.value= "";
+        }
+        function deleteItem(event){
+            event.target.parentElement.remove()
+        }
+        // addEventListener
+        // document.getElementById("btn").addEventListener("click",
+        // function(){
+        //     alert("Hello");
+        // }
+        // )
+    </script>
+</body>
+</html>

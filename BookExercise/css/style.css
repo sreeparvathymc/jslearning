@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Poppins", sans-serif;
+}
+.navbar{
+    background-color: #FD6569;
+    padding: 10px;
+}
+.container{
+    padding: 10px;
+}
+.book-container{
+   padding: 15px;
+   width: 25%;
+   background-color: black;
+   border-radius: 10px;
+   color: white;
+   margin: 30px;
+}
+.book-container h2{
+    color: #FD6569;
+}
+.book-container button{
+    background-color: #FD6569;
+    color: black;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    padding-right: 10px;
+    border: none;
+    margin-top: 10px;
+}
+.add-button{
+    background: #FD6569;
+    color: black;
+    border-bottom: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 40px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+input{
+    width: 350px;
+    height: 30px;
+    padding: 7px;
+    margin-bottom: 2rem;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    border-radius: 3px;
+}
+/* 
+textarea{
+    width: 350px;
+    height: 50px;
+    padding: 7px;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+} */
+label{
+    margin-bottom: 2rem;
+}
+.container-2{
+    width: 500px;
+}
+.container-2{
+    background-color: #FD6569;
+    padding: 2rem 2rem;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    /* right: 50%; */
+    z-index: 3;
+}
+#add{
+    padding: 0.5rem 2rem;
+    background-color: black;
+    color: white;
+}
+#cancel{
+    padding: 0.5rem 2rem;
+    background-color: black;
+    color: white; 
+}
+
+/* ******************************************* */
+
+#showbtn{
+    padding: 1rem 1.2rem;
+    border-radius: 50px;
+    background-color: #FD6569;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+#containerone{
+    background-color: #FD6569;
+}
+.container-2{
+   margin: auto;
+   margin-top: 4rem;
+   display: none;
+}
+#data{
+    background-color: #f9f9f9;
+    border: 1px solid black;
+    border-radius: 7px;
+    margin-bottom: 40px;
+    width: 400px;
+    padding: 1rem 1rem;
+}
+.headone{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: black;
+}
+.headtwo{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+.headthree{
+    font-size: 13px;
+    font-weight: 400;
+    color: #1e1e1e;
+}
+#bookdata{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-right: 12%;
+    margin-left: 12%;
+    
+}
+#data{
+    flex-basis: 40%;
+    /* margin-right: ; */
+}
+/* 
+.container-3{
+    position: relative;
+}
+
+input{
+    position: absolute;
+    right: 1px;
+} */
+
+.content-3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+

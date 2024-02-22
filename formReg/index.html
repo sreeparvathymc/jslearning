@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="container-box">
+            <form action="">
+                <h1>STUDENT FORM</h1>
+
+                <h4>Name</h4>
+                <input id="name" type="text" required>
+
+                <h4>Age</h4>
+                <input id="age" type="number" required>
+
+                <h4>Gender</h4>
+                <input id="female" type="radio" value="Female">
+                <label for="female">Female</label>
+
+                <input id="male" type="radio" value="Male">
+                <label for="male">Male</label>
+
+                <h4>Course</h4>
+                <input id="course" type="text" required>
+
+                <h4>Email</h4>
+                <input id="email" type="email" required>
+
+                <button id="btn" onclick="savefunction()">Save</button>
+            </form>
+        </div>
+    </div>
+    <div class="table-container">
+        <div class="table-content">
+            <table>
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Age</td>
+                        <td>Gender</td>
+                        <td>Course</td>
+                        <td>Email</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody id="trdata">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script>
+
+        var names = document.getElementById("name")
+        var age = document.getElementById("age")
+        var course = document.getElementById("course")
+        var email = document.getElementById("email")
+
+      var form = document.querySelector("form");
+      form.addEventListener("submit", function(event) {
+      event.preventDefault(); 
+      savefunction(); 
+      }); 
+
+
+        function savefunction() {
+            var gender;
+            
+            if (document.getElementById("female").checked) {
+                gender = document.getElementById("female").value;
+            }
+            else if (document.getElementById("male").checked) {
+                gender = document.getElementById("male").value
+            }
+
+            var tableRow = document.createElement("tr")
+            var td1 = document.createElement("td")
+            var td2 = document.createElement("td")
+            var td3 = document.createElement("td")
+            var td4 = document.createElement("td")
+            var td5 = document.createElement("td")
+            var deletebtn = document.createElement("button")
+           
+            td1.textContent = names.value
+            td2.textContent = age.value
+            td3.textContent = gender
+            td4.textContent = course.value
+            td5.textContent = email.value
+            deletebtn.textContent = "Delete"
+            deletebtn.setAttribute("id","delete_Btn")
+
+            deletebtn.addEventListener("click",
+            function deleteData(event){
+               event.target.parentElement.remove();
+            }
+            )
+            tableRow.append(td1, td2, td3, td4, td5, deletebtn)
+
+            document.querySelector("tbody").append(tableRow)
+            names.value = null
+            age.value = null
+            document.getElementById("male").checked = false;
+            document.getElementById("female").checked = false;
+            course.value = null
+            email.value = null
+        }
+
+    </script>
+</body>
+</html>
