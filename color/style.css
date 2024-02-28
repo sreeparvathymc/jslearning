@@ -1,0 +1,29 @@
+#container2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.box{
+    width: 100px;
+    height: 100px;
+   
+}
+#bluecolor{
+    background-color: blue;
+    
+}
+#yellowcolor{
+    background-color: yellow;
+
+}
+#redcolor{
+    background-color: red;
+
+}
+#orangecolor{
+    background-color: orange;
+
+}

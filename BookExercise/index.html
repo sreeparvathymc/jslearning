@@ -14,60 +14,42 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="navbar">
         <h1>Booksky</h1>
     </div>
     <button id="showbtn">+</button>
-
     <button onclick="add()"></button>
     <div id="bookdata">
-
-
         <div class="container-2">
-            
                 <!-- <label for="bookname">Book Name</label>
                  <input id="bookname">
                  <br>
-        
                  <label for="author">Author Name</label>
                  <input id="author">
                  <br>
-        
                  <label for="discription">Book Discription</label>
                  <input id="discription">
                  <br>
-        
                  <button id="add" onclick="add()">Add</button>
                  <button id="cancel" onclick="cancel()">Cancel</button> -->
-
-
                  <div class="content-3">
                     <label for="bookname">Book Name</label>
                     <input id="bookname">
                  </div>
-
                  <div class="content-3">
                     <label for="author">Author Name</label>
                     <input id="author">
                  </div>
-
                  <div class="content-3">
                     <label for="discription">Book Discription</label>
                     <input id="discription">
                  </div>
-
                  <button id="add" onclick="add()">Add</button>
                  <button id="cancel" onclick="cancel()">Cancel</button>
-
-          
-            
-            
         </div>
-
-
     </div>
-
 </body>
 <script>
     var showBtn = document.getElementById("showbtn");
@@ -78,28 +60,22 @@
 //     <label for="bookname">Book Name</label>
 //     <input id="bookname">
 //     <br>
-
 //     <label for="author">Author Name</label>
 //     <input id="author">
 //     <br>
-
 //     <label for="discription">Book Discription</label>
 //     <input id="discription">
 //     <br>
-
 //     <button id="add" onclick="add()">Add</button>
 //     <button id="cancel" onclick="cancel()">Cancel</button>
 // </div>`
-
     })
      function add(){
-        
         var mainDiv = document.getElementById("container-2")
         var bookName = document.getElementById("bookname")
         var author = document.getElementById("author")
         var discription = document.getElementById("discription")
         var bookData = document.getElementById("bookdata")
-
         var container3 = document.createElement("div")
         container3.setAttribute("id","data")
 
@@ -110,14 +86,14 @@
         var head2 = document.createElement("h4")
         head2.textContent =  author.value
         head2.setAttribute("class", "headtwo")
-
+                            
         var head3 = document.createElement("p")
         head3.textContent = discription.value
         head3.setAttribute("class", "headthree")
-
+              
         container3.append(head1, head2, head3)
         bookData.append(container3)
-
+                
         bookName.value = null;
         author.value = null;
         discription.value = null;
@@ -128,5 +104,6 @@
     // document.getElementById("showbtn").addEventListener("click" , () => {
     //     document.querySelector(".container-2").style.display = "block";
     // })
+    
 </script>
 </html>

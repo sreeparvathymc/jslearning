@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Color Scheme Switcher</h2>
+    <div id="container2">
+        <div id="bluecolor" class="box"></div>
+        <div id="yellowcolor" class="box"></div>
+        <div id="redcolor" class="box"></div>
+        <div id="orangecolor" class="box"></div>
+    </div>
+</body>
+<script>
+    // var blueColor = document.getElementById("bluecolor")
+    // if(blueColor.addEventListener("click",
+    // function(e){
+    //         console.log(e.target.id);
+    //     // document.querySelector("body").style.backgroundColor = "blue"; 
+
+    // }))
+    let divs = document.querySelectorAll(".box")
+    // for(let i = 0; i < divs.length ; i++){
+    //     console.log(divs[i]);
+    // }
+    divs.forEach((element) => {
+        element.addEventListener("click", function(e){
+            // console.log(e.target.id)
+            if(e.target.id === "bluecolor"){
+                document.querySelector("body").style.backgroundColor = "blue"; 
+            }else if(e.target.id === "yellowcolor"){
+                document.querySelector("body").style.backgroundColor = "yellow"; 
+            }else if(e.target.id === "redcolor"){
+                document.querySelector("body").style.backgroundColor = "red"; 
+            }else if(e.target.id === "orangecolor"){
+                document.querySelector("body").style.backgroundColor = "orange"; 
+            }
+        })
+    })
+    divs.forEach((ele) => {
+        ele.addEventListener("click" , (e) => {
+        })
+    })
+    divs.forEach((ele) =>{
+        if (e.target.id === "bluecolor"){
+            document.querySelector("body").style.backgroundColor ="blue";
+        }
+        else if(e.target.id === "yellowcolor"){
+            document.querySelector("body").style.backgroundColor = "yellow";
+        }
+        else if(e.target.id){
+            document.querySelector("body").style.backgroudcolor = "red"
+        }
+        else if(e.target.id === "orangecolor"){
+            document.querySelector("body").style.backgroundColor = "orange"
+        }
+    })
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>
